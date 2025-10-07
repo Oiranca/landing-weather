@@ -12,7 +12,8 @@
     "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
     "dev": "echo \"Open index.html in browser for development\"",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "install-deps": "npm install"
   },
   "keywords": [
     "html",
