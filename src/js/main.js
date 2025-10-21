@@ -1,6 +1,6 @@
 class WeatherApp {
   constructor() {
-    this.apiKey = '';
+    this.apiKey = import.meta.env.VITE_OPENWEATHER_API_KEY;
     this.baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
     this.weatherIcons = {
       '01d': '☀️',
@@ -26,20 +26,14 @@ class WeatherApp {
     this.init();
   }
 
-  async init() {
-    await this.loadApiKey();
+  init() {
     this.bindEvents();
     this.checkApiKey();
   }
 
-  async loadApiKey() {
-    await envLoader.loadEnv();
-    this.apiKey = envLoader.get('OPENWEATHER_API_KEY');
-  }
-
   checkApiKey() {
     if (!this.apiKey || this.apiKey === 'your_api_key_here') {
-      this.showError('API key not configured. Please add your OpenWeather API key to the .env file or config.js file.');
+      this.showError('API key not configured. Please add your OpenWeather API key to the .env file.');
       return false;
     }
     return true;

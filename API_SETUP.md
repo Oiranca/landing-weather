@@ -5,42 +5,49 @@
 To use this weather app, you need to:
 
 1. Get a free API key from [OpenWeatherMap](https://openweathermap.org/api)
-2. Add your API key using one of these methods:
+2. Configure your environment variables
 
-### Method 1: Using .env file (Recommended)
-Create a `.env` file in the project root:
+### Using .env file with Vite
+
+1. **Install dependencies:**
 ```bash
-OPENWEATHER_API_KEY=your_actual_api_key_here
+npm install
 ```
 
-### Method 2: Direct configuration
-Edit `src/js/config.js` and replace `'your_api_key_here'` with your actual API key:
-```javascript
-const CONFIG = {
-  OPENWEATHER_API_KEY: 'your_actual_api_key_here'
-};
+2. **Create a `.env` file** in the project root:
+```bash
+cp .env.example .env
 ```
+
+3. **Add your API key** to the `.env` file:
+```bash
+VITE_OPENWEATHER_API_KEY=your_actual_api_key_here
+```
+
+**Important:** Variables must start with `VITE_` prefix to be exposed to the client.
 
 ## Usage
 
-1. **Set up your API key** using one of the methods above
-2. **Open `index.html`** directly in your browser (no server needed!)
-3. **Enter a city name** in the search input
-4. **Click "Search"** or press Enter to get weather data
+1. **Install dependencies:** `npm install`
+2. **Set up your API key** in the `.env` file
+3. **Start the dev server:** `npm run dev`
+4. **Enter a city name** in the search input
+5. **Click "Search"** or press Enter to get weather data
 
 ## Features
 
-- **Pure Vanilla JavaScript** - No frameworks or build tools required
+- **Modern tooling** - Vite for fast development
+- **Environment variables** - Secure API key management with .env
 - **Responsive design** that works on all devices
 - **Real-time weather data** from OpenWeather API 2.5
 - **Weather icons and dynamic backgrounds**
 - **Clean, semantic HTML structure**
-- **SCSS-like nested CSS organization**
-- **Environment variable support** for secure API key management
-- **No server required** - works with direct file access
+- **ES6 Modules** - Modern JavaScript
 
 ## Development
 
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
 - `npm run lint` - Run linting checks
 - `npm run format` - Format code with Prettier
-- Open `index.html` directly in browser for development

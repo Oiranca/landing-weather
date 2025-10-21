@@ -48,6 +48,43 @@ HTML-CSS-Template/
    npm install
    ```
 
+## 🔑 Environment Configuration
+
+This project uses **Vite** as a bundler and a `.env` file to store sensitive configuration like API keys.
+
+### Quick Setup
+
+1. **Install dependencies first:**
+   ```bash
+   npm install
+   ```
+
+2. **Copy the example file:**
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Get your OpenWeather API Key:**
+   - Visit [OpenWeatherMap](https://openweathermap.org/api)
+   - Create a free account
+   - Copy your API key
+
+4. **Configure your `.env` file:**
+   ```
+   VITE_OPENWEATHER_API_KEY=your_actual_api_key_here
+   ```
+   
+   ⚠️ **Important:** In Vite, all environment variables must start with `VITE_` prefix to be exposed to the client.
+
+5. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   
+   This will automatically open your browser at `http://localhost:3000`
+
+📖 For detailed instructions, see [ENV_SETUP.md](ENV_SETUP.md)
+
 ## 📝 Available Scripts
 
 ### Linting

@@ -1,9 +1,13 @@
 {
-  "name": "html-css-template",
+  "name": "landing-weather",
   "version": "1.0.0",
-  "description": "Clean HTML CSS template with linting configuration",
+  "description": "Weather app with OpenWeather API and .env support",
   "main": "index.html",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "htmlhint *.html",
@@ -11,16 +15,15 @@
     "lint:js": "eslint \"src/**/*.js\"",
     "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
     "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
-    "dev": "echo \"Open index.html in browser for development\"",
-    "start": "npm run dev",
-    "install-deps": "npm install"
+    "start": "npm run dev"
   },
   "keywords": [
     "html",
     "css",
-    "template",
+    "weather",
     "frontend",
-    "responsive"
+    "responsive",
+    "vite"
   ],
   "author": "Your Name",
   "license": "MIT",
@@ -29,6 +32,7 @@
     "htmlhint": "^1.7.1",
     "prettier": "^3.6.2",
     "stylelint": "^16.24.0",
-    "stylelint-config-standard": "^39.0.0"
+    "stylelint-config-standard": "^39.0.0",
+    "vite": "^5.4.0"
   }
 }
